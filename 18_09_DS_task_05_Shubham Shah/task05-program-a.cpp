@@ -5,42 +5,37 @@ class Rectangle
 	public:
 		int length;
 		int breadth;
-		void setter0();
-        void setter1(int l,int b);
-		void setter2(int n);		
-		int getArea();
-}rec;
-
-void Rectangle:: setter0(){
+		
+    Rectangle(){
     length=0;
     breadth=0;
-}
-void Rectangle::setter1(int l,int b)
+	}
+	Rectangle(int l,int b)
 {
 	length = l;
     breadth = b;
-}
-void Rectangle:: setter2(int n){
+	}
+	Rectangle(int n){
     length=n;
     breadth=n;
-}
+};
 
-int Rectangle::getArea()
+int getArea()
 {
-	return length * breadth;
+  return length * breadth;
 }
+};
 
-main()
+int main()
 {
-    Rectangle rec;
-    rec.setter0();
+    Rectangle rec;    
 	int area = rec.getArea();
 	cout << "Area : " << area << endl;
-    rec.setter1(7,8);
-	int area1 = rec.getArea();
+	Rectangle rec1(19,25);   
+	int area1 = rec1.getArea();
 	cout << "Area : " << area1 << endl;
-    rec.setter2(5);
-	int area2 = rec.getArea();
+	Rectangle rec2(19);
+    int area2 = rec2.getArea();
 	cout << "Area : " << area2 << endl;   
-	
+	return 0;
 }

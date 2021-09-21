@@ -41,7 +41,7 @@ class professional
     void get_professional()
     {
         cout<<"\nEnter Name of the organization:";
-        cin >> Name_of_org;
+        cin >> name_of_org;
 
         cout<<"\nEnter Job Profile:";
         cin >> job_profile;
@@ -86,20 +86,19 @@ class academic
 };
 class biodata : public personal , public professional , public academic
 { public:
-    personal obj;
     void getBioData()
     {
     printf("\nEnter Biodata\n");
-        obj.get_personal();
-        get_professional();
+        get_personal();
+        get_professinal();
         get_academic(); 
     }
     void showBioData()
     {
         printf("\n\nBiodata\n");
-        print_personal();
-        print_professional();
-        print_academic();
+        show_personal();
+        show_professinal();
+        show_academic();
     }
 };
 int main()
